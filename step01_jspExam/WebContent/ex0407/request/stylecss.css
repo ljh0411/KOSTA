@@ -1,0 +1,17 @@
+.normal {  
+font-family: "±¼¸²", "µ¸¿ò"; 
+font-size: 12; 
+font-style: normal; 
+font-weight:normal; 
+text-decoration: none}
+
+.normalbold {  font-family: "±¼¸²", "µ¸¿ò"; font-size: 12;
+font-style: normal; font-weight: bold; text-decoration: none}
+
+td{font-size:12;font-weight:bold}
+a{text-decoration:none}
+
+input {font-size: 9pt; color: #000000; text-decoration: none;
+	border-style:groove;
+}
+
