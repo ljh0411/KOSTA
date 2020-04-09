@@ -21,7 +21,7 @@ $(function(){
 	$("input[type=button]").click(function(){
 		if(confirm("정말 아웃할래???")){
 			//세션의 정보를 모두 지우기 위해 새로운 창으로 이동.
-			
+			//
 			location.href ="Logout.jsp";
 			
 		}
