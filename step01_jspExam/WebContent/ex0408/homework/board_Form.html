@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<h3> 게시물 등록 - file에 저장</h3>
+
+<form method="post" action="FileWriter.jsp">
+    이름 :<input type="text" name="name" /> <br/>
+    제목 :<input type="text" name="subject" /> <br/>
+    내용: <textarea rows="10" cols="30" name="content"></textarea> <p/>
+
+    <input type="submit" value="등록하기" />
+</form>
+<!--
+    작성자이름_시간.txt 으로 저장
+    파일 경로
+    파일 리스트
+    새글 등록
+    IO 이용해서 파일 생성
+    alert로 생성되었습니다
+    FileReader.jsp로 이동하여 찍어냄
+    내용은 작성 제목 내용
+-->
+</body>
+</html>
+
+
+

@@ -9,4 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  	<!-- 예외클래스별 예외 페이지 설정하기 -->
+  <error-page>
+  	<exception-type>java.lang.NumberFormatException</exception-type>
+  	<location>/ex0409/exception/ex02/error/numberErr.jsp</location>  <!-- 반드시 /경로부터 실행 -->
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.ArithmeticException</exception-type>
+  	<location>/ex0409/exception/ex02/error/arithErr.jsp</location>
+  </error-page>
+  
+  
 </web-app>

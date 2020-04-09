@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link  rel="stylesheet" type="text/css" href="css/basic.css"  />
+<style type="text/css">
+.poster {
+	width : 150px;
+	height : 150px;
+	
+}
+
+a{text-decoration: none}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	function reloadTest(){
+	//localStorage 정보 가져오기
+	var str="";
+	var totalprice=0;
+	
+	for(var i=0; i<localStorage.length ; i++){
+		var key = localStorage.key(i);
+		var value = localStorage.getItem(key);
+		
+		//콤마를 기준으로 분리하기
+		 var v = value.split(",");
+		
+		//테이블 모양 만들기
+		str+="<tr>";
+		str+="<td><img src = '"+v[1]+"' class='poster'></td>"
+		str+="<td>"+key+"</td>"
+		str+="<td>"+v[0]+"</td>"
+		str+="<td>"+v[2]+"</td>"
+		str+="<td><button id='del' value='"+key+"'>삭제</button></td>"
+		str+="</tr>"
+		
+		//가격 누적하기
+		totalprice+=parseInt(v[2]);
+		
+	}//for문 끝
+	
+	//tbody영역에 추가한다.
+	$("#content").html(str);  // selector 안에 str을 덮어쓰기 하는것.
+	$("#price").html("주문가격 : "+totalprice);
+}//reloadTest 끝
+	
+	reloadTest();
+
+	///////////////////////////////////////////////////////////
+	/*삭제하기*/
+	//동적으로 생성된 Element에 이벤트 적용할때는 on()함수 이용한다.
+	//$(부모노드).on(click,이벤트 주체,function(){});
+	//$(이벤트주체).on(이벤트종류,function(){});
+	
+	/* $("#del").on("click",function(){
+		
+	}); */
+	
+	$(document).on("click","#del",function(){
+		
+		localStorage.removeItem($(this).val());
+		reloadTest();
+		
+	});
+		
+	
+});//ready 끝
+
+</script>
+</head>
+<body>
+		<article class="main">
+		<section>
+			<table width="80%"  align="center"  >
+			<caption class="caption">찜 리스트</caption>
+			<thead>
+				<tr><th>이미지</th><th>상품번호</th><th>상품이름</th><th>가격</th><th>삭제</th></tr>
+			</thead>
+			<tbody id="content">
+			
+				<!-- 찜 목록 LIST 출력하기 -->		
+			
+			
+			</tbody>
+			</table>
+		</section>
+		<section  class="toalprice" id="price">
+			
+		</section>
+		<section class="link">
+			<table   align="center">
+			<tr><td align="center">
+				<a href="">주문하러 가기</a> 
+				<a href="index.html">DVD LIST</a> 
+			</td></tr>
+			</table>
+		</section>
+		</article>
+</body>
+</html>
