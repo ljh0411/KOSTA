@@ -14,7 +14,7 @@ img{
 	hieght:300px;
 }
 </style>
-<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script>
 $(function(){
 	//로그아웃 버튼 클릭
@@ -22,7 +22,7 @@ $(function(){
 		if(confirm("정말 아웃할래???")){
 			//세션의 정보를 모두 지우기 위해 새로운 창으로 이동.
 			//
-			location.href ="Logout.jsp";
+			location.href ="logout";
 			
 		}
 	});
@@ -49,7 +49,7 @@ $(function(){
 			<h3>
 				[접속시간 : <%=session.getAttribute("sessionTime") %>]<p>
 				<%=session.getAttribute("sessionName")%>님 로그인 성공!!!<p>
-				<img src="images/common.jpg"/>
+				<img src="./session/images/common.jpg"/>
 				<input type="button" value="로그아웃" />
 			</h3>
 			

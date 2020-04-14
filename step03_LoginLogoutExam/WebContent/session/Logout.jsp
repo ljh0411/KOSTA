@@ -15,11 +15,11 @@
 </head>
 <body>
 
-<%
-	session.invalidate(); //세션 정보 지우기
+<%-- <% --%>
+// 	session.invalidate(); //세션 정보 지우기
 
-	response.sendRedirect("LoginForm.html");
-%>
+// 	response.sendRedirect("LoginForm.html");
+<%-- %> --%>
 
 </body>
 </html>

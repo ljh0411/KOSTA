@@ -9,4 +9,37 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+  <!-- 서블릿 등록하기 servletLifeCycle = new ServletLifeCycleExam()와 동일 -->
+	<servlet>
+		<servlet-name>LoginPro</servlet-name>
+		<servlet-class>homework.loginServlet</servlet-class>
+		<load-on-startup>1</load-on-startup><!-- web.xml 문서가 로딩될때 서블릿 이 생성됨 -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginPro</servlet-name>
+		<url-pattern>/login</url-pattern>
+
+	</servlet-mapping>
+  
+  
+  
+  <servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>homework.logout</servlet-class>
+		<load-on-startup>1</load-on-startup><!-- web.xml 문서가 로딩될때 서블릿 이 생성됨 -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+
+	</servlet-mapping>
+  
+  
+  
+  
+  
+  
 </web-app>
